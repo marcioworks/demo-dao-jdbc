@@ -38,6 +38,14 @@ public class Program {
 		 	 Seller newSeller = new Seller(null,"Greg","greg@gmail.com",new Date(),3200.00,department);
 		 	 sellerDao.insert(newSeller);
 		 	 System.out.println("Inserted! new Id = "+ newSeller.getId());
+		 	 
+		 	
+		 	 System.out.println("\n=== TEST 5 : Seller update===");
+		 	 newSeller = sellerDao.FindById(1);
+		 	 newSeller.setName("Marcio");
+		 	 sellerDao.update(newSeller);
+		 	 System.out.println("Update completed");
+		 	 
 	}
 
 }
